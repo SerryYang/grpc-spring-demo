@@ -1,0 +1,25 @@
+# Tomcat
+server:
+  port: 8083
+  servlet:
+    # 应用的访问路径
+    context-path: /
+  tomcat:
+    uri-encoding: UTF-8
+spring:
+  # 环境 dev|test|pro
+  profiles:
+    active: dev
+  output:
+    ansi:
+      enabled: detect #配置输出console的ide中的配色
+logging:
+  level:
+    com.louwen: debug
+    org.springframework: warn
+
+grpc:
+  server:
+    address: 0.0.0.0
+    enable-keep-alive: true
+    port: 20117

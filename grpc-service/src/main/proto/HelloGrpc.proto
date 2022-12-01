@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+//可定义数据类型：int32,uint64(long),bool(boolean),string,double,float
+option java_multiple_files = true;
+option java_package = "com.demo.grpc.service.grpc";
+option java_outer_classname = "HelloServiceProto";
+
+//RPC-service
+service HelloService {
+
+  //接口方法定义
+  rpc helloGrpc (HelloGrpcRequest) returns (HelloGrpcReply);
+
+}
+
+//接口入参
+message HelloGrpcRequest {
+  string inputString = 1;//输入的字符串内容
+}
+
+//接口返回
+message HelloGrpcReply {
+  string result = 1;//接口返回内容
+}

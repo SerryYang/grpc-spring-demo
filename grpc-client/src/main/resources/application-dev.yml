@@ -1,0 +1,8 @@
+#grpc配置
+grpc:
+  client:
+    grpc-service:
+      address: 'static://192.168.3.7:20880'
+      enableKeepAlive: true
+      keepAliveWithoutCalls: true
+      negotiationType: plaintext
