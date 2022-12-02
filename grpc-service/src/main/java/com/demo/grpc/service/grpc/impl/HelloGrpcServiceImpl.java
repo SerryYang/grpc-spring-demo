@@ -27,4 +27,5 @@ public class HelloGrpcServiceImpl extends HelloServiceGrpc.HelloServiceImplBase 
         responseObserver.onNext(build);
         responseObserver.onCompleted();
     }
+
 }
